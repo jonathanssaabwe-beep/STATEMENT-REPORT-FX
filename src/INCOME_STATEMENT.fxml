@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <VBox layoutX="70.0" layoutY="27.0" prefHeight="360.0" prefWidth="474.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="203.0" text="INCOME STATEMENT GENERATOR" textAlignment="CENTER" textFill="#2d6941" />
+            <Label fx:id="companyField" text="Company Name;-" />
+            <TextField fx:id="CompanyNameinput" onAction="#handleCompanyNameEnter" />
+            <Label text="Select transaction type" />
+            <ComboBox fx:id="categoryBox" onAction="#handleCategorySelect" prefWidth="150.0" />
+            <Label text="Amount input" />
+            <TextField fx:id="Amountinput" onAction="#handleAddItem" />
+            <Button mnemonicParsing="false" onAction="#handleAddItem" text="Add Transaction" textFill="#691f1f" />
+            <Label fx:id="revenueLabel" text="Total Revenue:" textFill="#3a653a" />
+            <Label fx:id="expenseLabel" text="Total Expenses:" textFill="#3a653a" />
+            <Label fx:id="netIncomeLabel" text="Net Income:" textFill="#3a653a" />
+            <Button layoutX="10.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleReturnToMenu" text="Return to Main Menu" textFill="#3a653a" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

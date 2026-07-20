@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <VBox layoutX="39.0" layoutY="35.0" prefHeight="353.0" prefWidth="468.0">
+         <children>
+            <Label text="BALANCE SHEET GENERATOR" />
+            <SplitPane dividerPositions="0.4691977077363897" prefHeight="310.0" prefWidth="468.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="209.0" prefWidth="209.0">
+                     <children>
+                        <Label layoutY="5.0" text="ASSETS" />
+                        <TextField fx:id="assetInput" layoutY="22.0" onAction="#handleAddAsset" />
+                        <Button layoutY="53.0" mnemonicParsing="false" onAction="#handleAddAsset" text="Add Asset" />
+                        <Label fx:id="totalAssetsLabel" layoutX="6.0" layoutY="88.0" text="Total Assets:" textFill="#3a653a" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="325.0">
+                     <children>
+                        <Label layoutY="5.0" text="LIABILITIES  &amp; EQUITY" />
+                        <TextField fx:id="liabilityInput" layoutY="22.0" onAction="#handleAddLiability" />
+                        <Button layoutY="54.0" mnemonicParsing="false" onAction="#handleAddLiability" text="Add Liability" />
+                        <Label layoutX="6.0" layoutY="79.0" text="SHARE CAPITAL" />
+                        <TextField fx:id="shareCapitalInput" layoutY="96.0" onAction="#handleShareCapitalEnter" />
+                        <Label layoutX="6.0" layoutY="129.0" text="RETAINED EARNINGS" />
+                        <TextField fx:id="retainedEarningsInput" layoutY="146.0" onAction="#handleVerifyBalanceSheet" />
+                        <Label fx:id="totalLiabilitiesEquityLabel" layoutX="10.0" layoutY="183.0" text="Total Liabilities &amp; Equity:" textFill="#3a653a" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Button mnemonicParsing="false" onAction="#handleVerifyBalanceSheet" text="Verify Balance Sheet" />
+         </children>
+      </VBox>
+      <Button layoutX="462.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleReturnToMenu" text="Return to Main Menu" textFill="#3a653a" />
+   </children>
+</AnchorPane>

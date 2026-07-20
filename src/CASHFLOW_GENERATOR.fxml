@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <VBox layoutX="7.0" layoutY="10.0" prefHeight="393.0" prefWidth="585.0">
+         <children>
+            <Label text="CASH FLOW STATEMENT GENERATOR" />
+            <Label text="Operating Activities" textFill="#5c1528" />
+            <HBox prefHeight="100.0" prefWidth="363.0">
+               <children>
+                  <TextField fx:id="opInflowField" onAction="#handleOpInflowEnter" promptText="Inflows(Receipts)" />
+                  <TextField fx:id="opOutflowField" onAction="#handleAddOperatingCash" promptText="Outflows(Payments)" />
+                  <Button fx:id="handleOperatingClick" mnemonicParsing="false" onAction="#handleAddOperatingCash" text="Add Operating Cash" />
+               </children>
+            </HBox>
+            <Label fx:id="opNetLabel" text="Net Cash from Operating:" textFill="#3a653a" />
+            <Label text="Investing Activities" textFill="#5c1528" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="invInflowField" onAction="#handleInvInflowEnter" promptText="Inflows(Asset Sales)" />
+                  <TextField fx:id="invOutflowField" onAction="#handleAddInvestingCash" promptText="Outflows(Asset Purchases)" />
+                  <Button fx:id="handleInvestingClick" mnemonicParsing="false" onAction="#handleAddInvestingCash" text="Add Investing Cash" />
+               </children>
+            </HBox>
+            <Label fx:id="invNetLabel" text="Net Cash from Investing:" textFill="#3a653a" />
+            <Label text="Financing Activities" textFill="#5c1528" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="finInflowField" onAction="#handleFinInflowEnter" prefHeight="25.0" prefWidth="177.0" promptText="Inflows(Issuing Stock/Debt)" />
+                  <TextField fx:id="finOutflowField" onAction="#handleAddFinancingCash" prefHeight="25.0" prefWidth="217.0" promptText="Outflows(Dividends/Debt Payable)" />
+                  <Button fx:id="handleFinancingClick" mnemonicParsing="false" onAction="#handleAddFinancingCash" text="Add Financing Cash" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="finNetLabel" layoutX="7.0" layoutY="419.0" text="Net Cash from Financing:" textFill="#3a653a" />
+      <Label fx:id="grandTotalCashLabel" layoutX="7.0" layoutY="455.0" text="NET INCREASE/DECREASE IN CASH:" />
+      <Button layoutX="9.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleReturnToMenu" text="Return to Main Menu" textFill="#3a653a" />
+   </children>
+</AnchorPane>

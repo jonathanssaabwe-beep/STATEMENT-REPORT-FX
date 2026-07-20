@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <VBox layoutX="24.0" layoutY="24.0" prefHeight="353.0" prefWidth="526.0">
+         <children>
+            <Label text="STATEMENT OF RETAINED EARNINGS" textFill="#30802a" />
+            <Label fx:id="begRetainedField" text="Beginning Retained Earnings" />
+            <TextField fx:id="begRetainedInput" onAction="#handleBegRetainedEnter" />
+            <Label fx:id="netIncomeField" text="Net Income for the Year" />
+            <TextField fx:id="netIncomeInput" onAction="#handleNetIncomeEnter" />
+            <Label fx:id="dividendsField" text="Dividends Declared" />
+            <TextField fx:id="dividendsInput" onAction="#handleCalculateRetained" />
+            <Button mnemonicParsing="false" onAction="#handleCalculateRetained" text="Calculate Ending Balance" textFill="#691f1f" />
+            <Label fx:id="endingRetainedLabel" text="Ending Retained Earnings:" textFill="#3a653a" />
+            <Button mnemonicParsing="false" onAction="#handleReturnToMenu" text="Return to Main Menu" textFill="#3a653a" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
